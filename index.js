@@ -1,1 +1,0 @@
-window.location.href = "./dist/index.html";
