@@ -14,7 +14,7 @@ function getWeatherByCity(cityName){
         url, 
         method: "GET", 
         statusCode: {
-            404: () => alert("Nome città errato!")            
+            404: () => alert("Nome città errato!")
         },
         dataType: "JSON", 
         success: (data, text, xhttp) => {
