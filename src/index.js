@@ -2,6 +2,7 @@ const KEY = process.env.API_KEY;
 const $ = require('jquery')
 
 function clickTriggered(){
+    console.log("click");
     let searchedCity = $("#city-search").val();
     if(searchedCity.length > 0){
         getWeatherByCity(searchedCity);
@@ -29,12 +30,12 @@ function setWeather(data){
     $("#city-field").text(data.name);
     $("#weather-condition").text(data.weather[0].description);
     $("img").attr("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);    
-    $("#current-temp").html(`<strong>${data.main.temp}</strong> °C`)
-    $("#max-temp").html(`<strong>${data.main.temp_max}</strong> °C`)
-    $("#min-temp").html(`<strong>${data.main.temp_min}</strong> °C`)
-    $("#current-hum").html(`<strong>${data.main.humidity}</strong> %`)
-    $("#wind-force").html(`<strong>${data.wind.speed}</strong>`)
-    $("#wind-deg").html(`<strong>${data.wind.deg}</strong>`)
+    $("#current-temp").html(`<strong>${data.main.temp}</strong> °C`);
+    $("#max-temp").html(`<strong>${data.main.temp_max}</strong> °C`);
+    $("#min-temp").html(`<strong>${data.main.temp_min}</strong> °C`);
+    $("#current-hum").html(`<strong>${data.main.humidity}</strong> %`);
+    $("#wind-force").html(`<strong>${data.wind.speed}</strong>`);
+    $("#wind-deg").html(`<strong>${data.wind.deg}</strong>`);
     
     
     
