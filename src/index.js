@@ -21,7 +21,8 @@ function getWeatherByCity(cityName){
         success: (data, text, xhttp) => {
             console.log(data);
             setWeather(data);
-        }
+        }, 
+        error: () => console.log("err")
     }); 
 }
 
