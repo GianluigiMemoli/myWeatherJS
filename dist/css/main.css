@@ -1,0 +1,159 @@
+.col-start-pos-1{
+    grid-column-start: 1;
+}
+.col-start-pos-2{
+    grid-column-start: 2;
+}
+.col-start-pos-3{
+    grid-column-start: 3;
+}
+.col-end-pos-1{
+    grid-column-end: 1;
+}
+.col-end-pos-2{
+    grid-column-end: 2;
+}
+.col-end-pos-3{
+    grid-column-end: 3;
+}
+
+.row-pos-1{
+    grid-row-start: 1;
+}
+.row-pos-2{
+    grid-row-start: 2;
+}
+.row-pos-3{
+    grid-row-start: 3;
+}
+.row-pos-4{
+    grid-row-start: 4;
+}
+.row-pos-5{
+    grid-row-start: 5;
+}
+.row-pos-6{
+    grid-row-start: 6;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    body{ 
+        display: grid;
+        grid-template-rows: repeat(3, 33.33%);
+        grid-template-columns: repeat(1, 100%);
+        height: 100%;
+        background: #0D1717;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    body{ 
+        display: grid;
+        grid-template-rows: repeat(3, 33.33%);        
+        grid-template-columns: repeat(3, 33.33%);
+        align-items: center;
+        height: 100%;
+        background: #0D1717;
+    }
+    
+    .col-l-pos-1{
+        grid-column-start: 1;
+    }
+    .col-l-pos-2{
+        grid-column-start: 2;
+    }
+    .col-l-pos-3{
+        grid-column-start: 3;
+    }
+
+    .row-l-pos-1{
+        grid-row-start: 1;
+    }
+    .row-l-pos-2{
+        grid-row-start: 2;
+    }
+    .row-l-pos-3{
+        grid-row-start: 3;
+    }
+    
+}
+
+main{
+    height: 100%;
+}
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-box{
+    display: flex;
+}
+
+.centering-container{
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+
+
+.data-grid{
+    display: grid;
+    grid-template-rows: repeat(6, 1 fr);
+    grid-auto-columns: 1fr 1fr;
+    justify-content: center;    
+    margin-top: 5%;
+}
+
+.to-left{
+    justify-self: left;
+    margin-left: 1rem;
+}
+.to-right{
+    justify-self: end;
+    margin-right: 1rem;
+}
+
+/*ID*/
+#title{
+    text-align: center;
+}
+
+#city-search{
+    width: 100%;
+    height: 30px;
+    background: #f58b54;
+    border-radius: 10px;
+    border-style: none;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#search-button{
+    border-radius: 50%;
+    background: #f58b54;
+    border-style: none;
+    width: 40px; 
+    height: 40px;   
+}
+
+#city-field{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#weather-condition{
+    align-self: center;
+}
+
+#weather-img{
+    width: 100px;
+}
+

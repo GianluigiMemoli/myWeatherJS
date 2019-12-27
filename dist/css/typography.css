@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    font-family: "Raleway", "Monospace";
+    color: #dfddc7;
+}
+
+.head{
+    font-size: 64px;
+}
+
+.city-name{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.basic-text{
+    font-size: 24px;
+}

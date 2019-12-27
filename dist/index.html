@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/main.css" type="text/css" rel="stylesheet">
+        <link href="css/typography.css" type="text/css" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/59da66d72d.js" crossorigin="anonymous"></script>
+        <meta charset="utf8">
+    </head>
+    <body>
+        <h1 id="title" class="row-l-pos-1 col-l-pos-2 head">Weather app</h1>
+        <main class="row-l-pos-2 col-l-pos-2">
+            <div class="weather-container">
+                    <span class="basic-text"><strong>Cerca citt&agrave;</strong></span>
+                    <div class="search-box">
+                        <input id="city-search" type="text" name="cityName">
+                        <button id="search-button" type="button" name="searchButton" value=""><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="data-grid">
+                        <p id="city-field" class="city-name row-pos-1 col-start-pos-1 col-end-pos-2">Lorem</p>                        
+                        <p id="weather-condition" class="row-pos-2 col-start-pos-1 col-end-pos-1 centering-container to-right basic-text">Soleggiato</p>
+                        <img id="weather-img" class="row-pos-2 col-start-pos-2 col-end-pos-2 to-left" src="test.png">                        
+                        <p class="basic-text row-pos-3 col-start-pos-1 col-end-pos-3 centering-container">Temperatura attuale <span id="current-temp"></span></p>
+                        <p class="basic-text row-pos-4 col-start-pos-1 col-end-pos-1 centering-container to-right">Massima <span id="max-temp"></span></p>
+                        <p class="basic-text row-pos-4 col-start-pos-2 col-end-pos-2 centering-container to-left">Minima <span id="min-temp"></span></p>
+                        <p class="basic-text row-pos-5 col-start-pos-1 col-end-pos-3 centering-container">Umidità <span id="current-hum"></span></p>
+                        <p class="basic-text row-pos-6 col-start-pos-1 col-end-pos-1 centering-container to-right">Forza vento <span id="wind-force"></span></p>
+                        <p class="basic-text row-pos-6 col-start-pos-2 col-end-pos-2 centering-container to-left">Gradi vento <span id="wind-deg"></span></p>
+                        </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="main.js"></script>
+</html>

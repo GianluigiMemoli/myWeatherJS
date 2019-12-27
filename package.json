@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv-webpack": "^1.7.0"
+  },
+  "devDependencies": {
+    "jquery": "^3.4.1",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --inline --progress --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
