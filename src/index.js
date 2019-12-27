@@ -9,6 +9,7 @@ function clickTriggered(){
     }
 
 }
+
 function getWeatherByCity(cityName){
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=it&units=metric&appid=${KEY}`;
     $.ajax({
@@ -26,6 +27,34 @@ function getWeatherByCity(cityName){
     }); 
 }
 
+function geoTriggered(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(getWeatherByCoordinates); 
+    }
+}
+
+function getWeatherByCoordinates(coordinates){
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.coords.latitude}&lon=${coordinates.coords.longitude}&lang=it&units=metric&appid=${KEY}`;
+    $.ajax({
+        url, 
+        method: "GET", 
+        statusCode: {
+            404: () => alert("Nome città errato!")
+        },
+        dataType: "JSON", 
+        success: (data, text, xhttp) => {
+            console.log(data);
+            setWeather(data);
+        }, 
+        error: (xhr, options, errorThrown) => console.log(`${xhr.status} \n ${errorThrown}`)
+    }); 
+
+}
+
+
+
+
+
 function setWeather(data){
     console.log("setting");
     $("#city-field").text(data.name);
@@ -41,7 +70,17 @@ function setWeather(data){
     
     
 }
+$("#city-search").keyup((event) => {
+    console.log("key");
+    if(event.which == 13){
+        clickTriggered();
+    }
+
+})
 
 let searchButton = $("#search-button");
 searchButton.click(() => clickTriggered())
-getWeatherByCity("Salerno")
+getWeatherByCity("Salerno");
+
+
+$("#geo-button").click(() => geoTriggered());
