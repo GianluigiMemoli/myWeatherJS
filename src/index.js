@@ -22,7 +22,7 @@ function getWeatherByCity(cityName){
             console.log(data);
             setWeather(data);
         }, 
-        error: () => console.log("err")
+        error: (xhr, options, errorThrown) => console.log(`${xhr.status} \n ${errorThrown}`)
     }); 
 }
 
